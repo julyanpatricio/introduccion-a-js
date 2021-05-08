@@ -8,6 +8,21 @@
     <title>Clase 5</title>
 </head>
 <body>
+  <form id="salario" onsubmit="return false;">
+    <!-- el obsubmit return false es equivalente a devolver un return false en la funcion
+    que hace el submit en el js. evita que se recargue la pagina al submitear
+    -->
+    <label>Salario anual:</label>
+    <input type="number" placeholder='Ingrese su salario anual' id="salario-anual"/>
+    <button id="calcular">Calcular</button>
+    <!-- Por defecto el tag button es del tipo submit, por eso el onsubmit='retirn false'
+        para que no se recargue la pagina al clickear. tambien se puede especificar
+        type='button' y se evita el return false -->
+    <label>Salario mensual:</label>
+    <input type="number" disabled id="salario-mensual"/>
+    <button type= 'reset' id="reseteador">Limpiar</button>
+  </form>
 
+  <script src="tarea-clase-5.js"></script>
 </body>
 </html>
