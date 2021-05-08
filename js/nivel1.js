@@ -40,6 +40,7 @@
 
 // Tarea: Ahora te toca a vos! Acá abajo escribí una alerta que diga "Hola mundo!"
 
+// alert('Hola Mundo!')
 
 // Tarea: Una vez que la alerta funcione, comentala poniendo '//' en la línea donde está el código y guardá los cambios.
 // Una vez que recargás la página, ya no debería aparecer más.
@@ -47,6 +48,7 @@
 
 // Tarea: Ahora probá hacer un console.log de un mensaje que queramos.
 
+// console.log('Hola Mundo!')
 
 // Consejo: Para recargar el navegador podemos apretar 'CMD + R' en Mac y 'CTRL + R' en
 //      Windows.
@@ -102,7 +104,8 @@
 
 // TAREA: Creá 2 variables indefinidas, llamadas numeroUno y numeroDos.
 
-
+//let numeroUno
+//let numeroDos
 /*
     Podés usar el nombre de tus variables pare representar qué información tienen adentro, por ejemplo:
 
@@ -115,6 +118,9 @@
 // Crear 2 variables nuevas, una con tu nombre, la segunda con tu edad. Dales un nombre apropriado y
 // mostralas con un alert.
 
+//let nombre='Julian'
+//let edad=32
+//alert(`Mi nombre es ${nombre} y tengo ${edad} años`)
 
 // Consejo: para mostrar 2 variables de texto al mismo tiempo, las podés unir usando el signo '+'. Ejemplo:
 
@@ -150,9 +156,12 @@
 
 // TAREA: Crear una constante y mostrarla con un alert
 
+// const gravedad = 9.8
+// alert(gravedad)
 
 // TAREA: Intentar asignar un valor a una constante y ver qué pasa (mirar la consola)
 
+// gravedad = 10
 
 // Consejo: No te olvides de comentar (//) los alerts y los errores intencionales (como en la tarea anterior) para
 // que los alerts no aparezcan cada vez, y para que los errores no hagan que el programa se detenga.
@@ -341,7 +350,7 @@
         //algo
     else
         //algo que va a pasar si no se cumple ningún otra condición
-        
+
 
     Ejemplo:
 
@@ -354,7 +363,7 @@
         console.log('Nuestro número es igual a 7');
     }
 
-    Consejo: Podemos usar la cantidad de 'else if' que queramos uno después del otro, 
+    Consejo: Podemos usar la cantidad de 'else if' que queramos uno después del otro,
     el primero que es 'verdadero' es el único que pasa.
 */
 
@@ -379,7 +388,7 @@
     =================
     Poner un signo de exclamación (!) antes de un valor Booleano nos da el valor OPUESTO.
     Este operador ! se llama el operador "not".
-    
+
     El resultado de una comparación es un valor Booleano, lo podemos guardar en una variable así:
 
     const bool = (1 < 2);

@@ -6,11 +6,12 @@
 function calcularEdad(anioActual, anioNacimiento) {
     return anioActual - anioNacimiento;
 }
-
+/*
 const anioActual = Number(prompt("Cuál es el año actual?"));
 const anioNacimiento = Number(prompt("En qué año naciste?"));
 
 console.log('Tenés ' + calcularEdad(anioActual, anioNacimiento) + ' años');
+*/
 
 // Preguntar el salario anual y calcular el salario mensual
 // Preguntar el salario mensual y calcular el anual
@@ -36,6 +37,7 @@ function calcularSalarioDiario(salarioAnual) {
     return salarioAnual / cantidadDiasEnUnAnio;
 }
 
+/*
 const salarioMensual = Number(prompt('Cuál es tu salario mensual?'));
 console.log('Tu salario anual es ' + calcularSalarioAnual(salarioMensual));
 
@@ -43,6 +45,8 @@ const salarioAnual = Number(prompt('Cuál es tu salario mensual?'));
 console.log('Tu salario mensual es ' + calcularSalarioMensual(salarioAnual));
 console.log('Tu salario semanal es ' + calcularSalarioSemanal(salarioAnual));
 console.log('Tu salario diario es ' + calcularSalarioDiario(salarioAnual));
+*/
+
 
 /// SCOPE
 

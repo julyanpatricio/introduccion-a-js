@@ -53,7 +53,7 @@
     Los archivos CSS consisten en "bloques de declaración". Cada bloque de
     declaración está compuesto de un "selector" y de un conjunto de reglas de estilo
     visuales. Una declaración se ve así:
-    
+
     [selector] {
       nombre-de-estilo: valor;
       nombre-de-estilo: valor;
@@ -123,9 +123,18 @@
 // TAREA: Ahora te toca a vos! — Obtené la etiqueta h1 de la página y guardala en una variable
 //       variable llamada nuestroTitulo.
 //       Utilizá console.log para ver lo que obtuviste!
+// NOTA: para seleccionar una clase se pone un punto delante del nombre.
+//      para selecciona un elemento con id se pone un numeral delante
+
+let nuestroTitulo = document.querySelector('h1');
+console.log(nuestroTitulo) // va a mostrar el elemento junto con los tags: <h1>'Hola'</h1>
+console.log(nuestroTitulo.innerText) // va a mostrar solo el texto: 'Hola'
 
 
 
+
+// tamien se pueden seleccionar elementos o todos los elementos de un area determinada
+// document.querySelector(body li) selecciona los elementos li que hay en body
 
 
 
@@ -146,15 +155,16 @@
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
+const mediaLinks = document.querySelectorAll('li')
+console.log(mediaLinks)
 
 
 
 
-
-// TAREA: Ahora utilizá console.log para ver la cantidad de 
+// TAREA: Ahora utilizá console.log para ver la cantidad de
 // elementos li que hay con mediaLinks.length
 
-
+console.log(`Hay ${mediaLinks.length} elementos li`)
 
 
 
@@ -162,6 +172,10 @@
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
+for(let e of mediaLinks){
+  //console.log(e)
+  console.log(e.innerText)
+}
 
 
 
@@ -170,7 +184,7 @@
 /*
     Propiedades de los elementos
     ==================
-    
+
     Ok, hasta acá todo bien. Peeeroo, ¿que pasa si queremos obtener SOLO el texto
     de nuestra etiqueta 'h1'?
     Los elementos de página tienen una propiedad para esto: '.textContent'.
@@ -183,7 +197,13 @@
 
 // TAREA: Obtené el contenido de nuestro elemento 'h1'
 // y utilizá console.log para mostrarlo.
+// let nuestroTitulo = document.querySelector('h1')
+console.log(nuestroTitulo.textContent)
+// .textContent es similar a  .innerText;
+// innerText devuelve todo texto de un elemento siempre y cuando sea visible para el edadUsuario
+// textContent devuelve todo el texto del html, independientemente de si es visible o no
 
+//tambien existe innerHTML que devuelve todo el codigo html de un elemento
 
 
 
@@ -193,7 +213,7 @@
     Editar el contenido de la página
     ====================
 
-    Podemos simplemente cambiar el contenido de las étiquetas utilizando la propiedad que 
+    Podemos simplemente cambiar el contenido de las étiquetas utilizando la propiedad que
     vimos recién, '.textContent'.
 
     Ejemplo:
@@ -204,7 +224,8 @@
 */
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
-
+// podemos modificar una pagina web estatica modificando el elemento a traves de la variable
+nuestroTitulo.innerText = 'Bienvenido!'
 
 
 
@@ -212,17 +233,20 @@
 /*
     Editando atributos
     ==================
-    
+
     También podemos cambiar y establecer atributos en nuestros elementos.
 
     Ejemplo:
+*/
 
     const nuestroTwitter = document.querySelector('.twitter');
-    ourTwitter.id = "sorpresa";
-*/
+    nuestroTwitter.id = "surprise";
+
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
+const atributoImg = document.querySelector('img')
+atributoImg.src = "img/kittens.jpeg"
 
 
 
@@ -247,7 +271,9 @@
 */
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
-
+const nuestroEmail = document.querySelector('.email')
+nuestroEmail.style.backgroundColor = 'red'
+nuestroEmail.style.color = 'black'
 
 
 
@@ -277,7 +303,10 @@
 //       en nuestra cabecera.
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
-
+const nodoPagina = document.querySelector('header')
+const nuevaImagen = document.createElement('img')
+nuevaImagen.src="img/logo_biotech.png"
+nodoPagina.appendChild(nuevaImagen);
 
 
 
@@ -288,3 +317,17 @@
 // Levántate, estira las piernas y celebra tu logro.                      //
 // ¡Creo que esto amerita un festejo!                                     //
 ////////////////////////////////////////////////////////////////////////////
+
+const botonIngreso = document.querySelector("#ingresar")
+
+botonIngreso.onclick = function(){
+  const edadUsuario = Number(document.querySelector("#edad-usuario").value);
+  let textResultado;
+  if(edadUsuario >= 18){
+    textResultado=('podes ingresar')
+  } else textResultado=('no podes ingresar');
+
+  document.querySelector('#resultado').innerText = textResultado
+  //return false
+  //se puso un onsubmit="return false;" en el html que es equivalente
+}
